@@ -1,0 +1,4 @@
+#+TITLE: Geoff Wark's Emacs Config
+#+AUTHOR: Geoff Wark
+
+This is my personal [[https://www.gnu.org/software/emacs/][GNU Emacs]] configuration. *Little to no support will be provided.*
