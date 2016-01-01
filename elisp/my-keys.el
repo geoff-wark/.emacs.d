@@ -14,5 +14,6 @@
 (global-set-key   (kbd "C-x F")       'my-find-file-as-root)
 (global-set-key   (kbd "C-c U")       'my-untabify-buffer)
 (global-set-key   (kbd "C-c r")       'revert-buffer)
+(global-set-key   (kbd "C-S-c C-v")   'simpleclip-paste)
 (global-set-key   (kbd "M-x")         'smex)
 (global-set-key   (kbd "M-X")         'smex-major-mode-commands)

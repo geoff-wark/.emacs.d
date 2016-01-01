@@ -25,3 +25,6 @@
 
 (dolist (p my-load-libs)
   (load-library p))
+
+(add-to-list 'load-path "~/workspace/pianobar.el/")
+(autoload 'pianobar "pianobar" nil t)
