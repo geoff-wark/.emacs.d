@@ -19,6 +19,9 @@
 (add-hook 'after-init-hook     'global-company-mode)
 (add-hook 'after-init-hook    #'global-flycheck-mode)
 
+(autoload 'js3-mode "js3-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js3-mode))
+
 (ido-mode                1)
 (ido-vertical-mode       1)
 (projectile-global-mode)

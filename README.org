@@ -2,3 +2,14 @@
 #+AUTHOR: Geoff Wark
 
 This is my personal [[https://www.gnu.org/software/emacs/][GNU Emacs]] configuration. *Little to no support will be provided.*
+
+* Install
+Must run the following after cloning to =$HOME=:
+#+BEGIN_SRC sh
+cd ~/.emacs.d/elisp/
+git clone https://github.com/thomblake/js3-mode.git
+#+END_SRC
+
+Then in Emacs:
+
+=M-x byte-compile-file RET ~/.emacs.d/elisp/js3-mode/js3-mode.el RET=
