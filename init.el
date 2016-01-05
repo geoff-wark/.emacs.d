@@ -26,5 +26,22 @@
 (dolist (p my-load-libs)
   (load-library p))
 
-(add-to-list 'load-path "~/workspace/pianobar.el/")
-(autoload 'pianobar "pianobar" nil t)
+(unless (eq system-type 'windows-nt)
+  (add-to-list 'load-path "~/workspace/pianobar.el/")
+  (autoload 'pianobar "pianobar" nil t))
+
+(when (featurep 'ns)
+  (defun ns-raise-emacs ()
+    "Raise Emacs."
+    (ns-do-applescript "tell application \"Emacs\" to activate"))
+
+  (defun ns-raise-emacs-with-frame (frame)
+    "Raise Emacs and select the provided frame."
+    (with-selected-frame frame
+      (when (display-graphic-p)
+        (ns-raise-emacs))))
+
+  (add-hook 'after-make-frame-functions 'ns-raise-emacs-with-frame)
+
+  (when (display-graphic-p)
+    (ns-raise-emacs)))

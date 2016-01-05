@@ -6,6 +6,9 @@
 (require 'smartparens-config)
 
 
+(when (eq system-type 'darwin)
+  (exec-path-from-shell-initialize))
+
 (setq locale-coding-system   'utf-8)
 (set-terminal-coding-system  'utf-8)
 (set-keyboard-coding-system  'utf-8)
@@ -19,9 +22,14 @@
 (ido-mode                1)
 (ido-vertical-mode       1)
 (projectile-global-mode)
-(simpleclip-mode        1)
+(simpleclip-mode         1)
 (smartparens-global-mode 1)
 (winner-mode             1)
+
+(setq-default indent-tabs-mode nil
+        tab-width 2
+        c-basic-offset 4)
+(c-set-offset 'case-label '+)
 
 (smex-initialize)
 (defadvice smex (around space-inserts-hyphen activate compile)

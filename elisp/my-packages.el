@@ -14,6 +14,7 @@
     company
     company-emoji
     emojify
+    exec-path-from-shell
     expand-region
     flycheck
     fringe-helper

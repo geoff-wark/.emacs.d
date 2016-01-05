@@ -9,7 +9,7 @@
 (load-theme 'zenburn t)
 
 (setq default-frame-alist              '((cursor-color . "#FF0000")))
-(when (eq system-type 'gnu/linux)
+(unless (eq system-type 'darwin)
   (add-to-list 'default-frame-alist '(font . "Meslo LG S-10")))
 
 (toggle-indicate-empty-lines)
